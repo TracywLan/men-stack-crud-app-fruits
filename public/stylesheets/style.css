@@ -177,10 +177,58 @@ form {
   gap: 10px;
 }
 
-label,
-input {
-  margin: 10px 5px 10px 0;
+label {
+  display: block;
+  font-weight: 600;
+  color: #3f4a3a;
+  margin-bottom: 8px;
+  font-size: 1.1rem;
+}
+
+input[type="text"],
+input[type="checkbox"] {
+  width: 100%;
+  padding: 16px 20px;
+  border: 3px solid #fff;
+  border-radius: 15px;
+  font-size: 1.1rem;
   font-family: inherit;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  border-color: #769642;
+  box-shadow: 0 0 0 4px rgba(118, 150, 66, 0.2);
+  background: white;
+  transform: translateY(-2px);
+}
+
+input[type="text"]:hover {
+  border-color: #f47b5b;
+}
+
+.checkbox-div {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  gap: 12px;
+  padding: 16px 20px;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+  /* cursor: pointer; */
+}
+
+.checkbox-div input[type="checkbox"] {
+  width: auto;
+  margin: 0;
+  transform: scale(1.2);
+  accent-color: #769642;
+  cursor: pointer;
 }
 
 button {

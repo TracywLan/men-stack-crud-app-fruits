@@ -2,7 +2,8 @@ const mongoose = require("mongoose");
 
 // Create the schema
 const fruitSchema = new mongoose.Schema({
-    name:String,
+    name: { type: String, required: true },
+    color: { type: String, required: true},
     isReadyToEat:Boolean,
 });
 

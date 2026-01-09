@@ -10,11 +10,11 @@
   </head>
     <body>
       <div class="fruit-details">
-        <h1><%= fruit.name %></h1>
+        <h1 style="color: <%= fruit.color %>"><%= fruit.name %></h1>
         <% if(fruit.isReadyToEat){ %>
-        <p>This fruit is ready to eat!</p>
+        <p class="fruit-status">This fruit is ready to eat!</p>
         <% } else { %>
-        <p>This fruit is not ready to eat!</p>
+        <p class="fruit-status">This fruit is still growing!</p>
         <% } %>
       </div>
       <div class="fruit-actions">
@@ -32,11 +32,6 @@
           <div class="edit-text">Edit <%= fruit.name %></div>
         </a>
       </div>
-
-        <a href="/fruits/<%= fruit._id %>/edit" class="fruits-index-link" href="/fruits">
-          <div class="index-link-text">Edit <%= fruit.name %>
-          </div>
-        </a>
 
         <a class="fruits-index-link" href="/fruits">
           <div class="index-link-text">Back to Fruits

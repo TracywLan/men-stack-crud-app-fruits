@@ -145,7 +145,7 @@ footer {
 }
 
 .fruit-cards:hover {
-  border: 4px solid #f47b5b;
+  /* border: 4px solid #f47b5b; */
   transform: translateY(-3px);
   box-shadow: 0 8px 20px rgba(244, 123, 91, 0.3);
 }
@@ -317,6 +317,12 @@ button:active {
 .edit-text:active {
   background-color: rgb(217, 108, 78);
   transform: translateY(1px);
+}
+
+.fruit-status{
+  display: flex;
+  justify-content: center;
+  color: #666;
 }
 
 /* Responsive */

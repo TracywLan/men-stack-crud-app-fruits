@@ -22,8 +22,8 @@
     <% } else { %>
       <% allFruits.forEach(fruit => { %>
       <li>
-        <a class="fruit-cards" href="/fruits/<%= fruit._id %>"><%= fruit.name %>
-        </a>
+        <a class="fruit-cards" href="/fruits/<%= fruit._id %>" style="color: <%= fruit.color %>!important;"><%= fruit.name %></a>
+        <div class="fruit-color-circle" style="background: <%= fruit.color %>;"></div>
       </li>
       <% }); %>
     <% } %>

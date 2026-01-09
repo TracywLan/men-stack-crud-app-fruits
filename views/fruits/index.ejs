@@ -1,17 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/stylesheets/style.css">
+  <title>All Fruits</title>
 </head>
 <body>
-    <%- include('../partials/navbar.ejs') %>
-  <h1>All Fruits</h1>
-  <ul>
-    <% allFruits.forEach(fruit => { %>
-      <li><%= fruit.name %></li>
-    <% }); %>
+  <%- include('../partials/navbar.ejs') %>
+
+  <div class="index-header-div">
+     <a class="add-fruit" href="/fruits/new">Add fruit</a>
+  </div>
+  <ul class="fruits-list">
+    <% if (!allFruits || allFruits.length === 0) { %>
+      <li class="no-fruits">
+        <p>No fruits available. Please add a new fruit at 
+          <a class="add-fruit" href="/fruits/new">Add fruit</a>
+        </p>
+      </li>
+    <% } else { %>
+      <% allFruits.forEach(fruit => { %>
+      <li>
+        <a class="fruit-cards" href="/fruits/<%= fruit._id %>"><%= fruit.name %>
+        </a>
+      </li>
+      <% }); %>
+    <% } %>
   </ul>
 </body>
 </html>
